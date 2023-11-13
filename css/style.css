@@ -94,6 +94,10 @@ body{
     margin-bottom: 6px;
 }
 
+.weather{
+    display: none;
+}
+
 
 
 

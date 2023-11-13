@@ -98,6 +98,13 @@ body{
     display: none;
 }
 
+.error{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: red;
+    display: none;
+}
 
 
 

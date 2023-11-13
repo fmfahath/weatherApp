@@ -1,13 +1,12 @@
 //fetching data from  API
 const apiKey = "3216a92ffcaa9289d6d7efe46efb895a";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
-const city = "&q=eravur";
-const fullUrl = apiUrl + city + `&appid=${apiKey}`;
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-async function checkWeather(){
-    const response = await fetch(fullUrl);
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     //display fetched data
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
@@ -16,4 +15,4 @@ async function checkWeather(){
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";    
 }
 
-checkWeather();
+checkWeather(city);

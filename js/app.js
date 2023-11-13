@@ -7,6 +7,12 @@ async function checkWeather(){
     const response = await fetch(fullUrl);
     var data = await response.json();
     console.log(data);
+
+    //display fetched data
+    document.querySelector(".temp").innerHTML = data.main.temp + "°c";
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";    
 }
 
 checkWeather();

@@ -12,9 +12,9 @@ async function checkWeather(city){
     // console.log(data);
 
     //Input validation (check valid city name)
-    if(response.status == 404){
+    if(response.status == 404 || searchBox.value == ""){
         document.querySelector(".error").style.display = "block";
-        document.querySelector(".weather").style.display = "none";
+        // document.querySelector(".weather").style.display = "none";
     }else{
 
          //display fetched data
@@ -37,7 +37,7 @@ async function checkWeather(city){
         }
 
         //display weather card when user click the search button
-        document.querySelector(".weather").style.display = "block"
+        // document.querySelector(".weather").style.display = "block"
         document.querySelector(".error").style.display = "none";
     }
 }   
